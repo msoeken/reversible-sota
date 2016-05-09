@@ -23,6 +23,18 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 ### Ancilla-free methods
 Ancilla-free synthesis methods guarantee minimality in number of lines (space).
 
+#### Transformation-based synthesis
+Given a truth table of a Boolean function, transformation-based synthesis applies gates and adjusts the truth table accordingly in a way that each gate application gets the truth table closer to the identity function.  If the identity function has been reached, all applied gates make up for the circuit that realizes the initial function.
+
+**Input representations:** truth table
+
+**Gate libraries:** MCT
+
+**Implementations:** [RevKit](https://github.com/msoeken/cirkit/blob/master/addons/cirkit-addon-reversible/src/reversible/synthesis/transformation_based_synthesis.cpp) (command: `tbs`)
+
+**References:**
+* [D.M. Miller, D. Maslov, G.W. Dueck: A transformation based algorithm for reversible logic synthesis, in: *DAC* **40**, 2003, 318-323.](http://dl.acm.org/citation.cfm?doid=775832.775915)
+
 ### Hierarchical methods
 Hierachical methods do neither guarantee optimality for number of gates nor for number of lines.
 
