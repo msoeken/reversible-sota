@@ -2,6 +2,14 @@
 
 ## Gate libraries
 
+### NCT (Not, CNOT, Toffoli)
+
+| NOT                  | CNOT                   | Toffoli                      |
+| -------------------- | ---------------------- | ---------------------------- |
+| ![NOT](data/not.png) | ![CNOT](data/cnot.png) | ![Toffoli](data/toffoli.png) |
+
+The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli gate is a double-controlled NOT gate. These gates are universal in a sense, that every Boolean function can be realized if an arbitrary number of variables (lines) is permitted.  Given *n* variables, the NCT gate library can realize all permutations over *n* ≤ 3 variables and all even permutations over *n* > 3 variables.
+
 ## Synthesis algorithms
 
 ### Exact methods
