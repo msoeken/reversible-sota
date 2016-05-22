@@ -1,0 +1,80 @@
+\usetikzlibrary{calc}
+
+\tikzset{%
+  font=\small,
+  >=latex,
+  border/.style={draw=white,line width=1pt},
+  block/.style={anchor=north west,minimum width=.4\linewidth,outer sep=0pt,border},
+  header/.style={minimum height=24pt},
+  category/.style={fill=blue!50!white,font=\bfseries},
+  column header/.style={block,header,category,inner sep=5pt},
+  cost header/.style={block,header,font=\footnotesize\slshape,fill=blue!20!white,align=center,minimum width=35pt},
+  cost block/.style={block,fill=gray!10!white,minimum width=35pt,font=\normalsize},
+  algorithm block/.style={block,fill=gray!30!white,align=left},
+  functional exact/.style={minimum height=40pt},
+  functional heur/.style={minimum height=40pt},
+  structural/.style={minimum height=55pt}
+}
+
+\newenvironment{algitems}{\begin{itemize}[label={\raise1pt\hbox{\tiny$\blacksquare$}}]}{\end{itemize}}
+\newcommand{\blocktext}[1]{\parbox{.38\linewidth}{\baselineskip=14pt #1}}
+
+\begin{tikzpicture}
+  % Column headers
+  \node[cost header] (cost lines) {line \\ optimum};
+  \node[cost header] at (cost lines.north east) (cost gates) {gate \\ optimum};
+  \node[column header] at (cost gates.north east) (nor hdr) {nonreversible function};
+  \node[column header] at (nor hdr.north east) (rev hdr) {reversible function};
+
+  % Functional (exact)
+  \node[cost block,functional exact] (func exact lines) at (cost lines.south west) {\textcolor{green!50!black}{\cmark}};
+  \node[cost block,functional exact] (func exact gates) at (cost gates.south west) {\textcolor{green!50!black}{\cmark}};
+  \node[algorithm block,functional exact] (func exact nor) at (nor hdr.south west) {};
+  \node[algorithm block,functional exact] (func exact rev) at (rev hdr.south west) {%
+    \blocktext{%
+      \begin{algitems}
+        \item SAT-based synthesis
+        \item Enumerative synthesis
+      \end{algitems}
+    }
+  };
+
+  % Functional (heuristic)
+  \node[cost block,functional heur] (func heur lines) at (func exact lines.south west) {\textcolor{green!50!black}{\cmark}};
+  \node[cost block,functional heur] (func heur gates) at (func exact gates.south west) {\textcolor{red!50!black}{\xmark}};
+  \node[algorithm block,functional heur] (func heur nor) at (func exact nor.south west) {};
+  \node[algorithm block,functional heur] (func heur rev) at (func exact rev.south west) {%
+    \blocktext{%
+      \begin{algitems}
+        \item Transformation-based synthesis
+        \item Decomposition-based synthesis
+      \end{algitems}
+    }
+  };
+
+  % Structural
+  \node[cost block,structural] (struc lines) at (func heur lines.south west) {\textcolor{red!50!black}{\xmark}};
+  \node[cost block,structural] (struc gates) at (func heur gates.south west) {\textcolor{red!50!black}{\xmark}};
+  \node[algorithm block,structural] (struc nor) at (func heur nor.south west) {%
+    \blocktext{%
+      \begin{algitems}
+        \item ESOP-based synthesis
+        \item Hierarchical synthesis
+        \item Building block synthesis
+      \end{algitems}
+    }
+  };
+  \node[algorithm block,structural] (struc rev) at (func heur rev.south west) {};
+
+  % Row headers
+  \fill[red,border,category] (func exact lines.north west) coordinate (a) rectangle ([xshift=-24pt] func heur lines.south west) coordinate (b);
+  \node[category,rotate=90] at ($(a)!.5!(b)$) {functional};
+  \fill[red,border,category] (struc lines.north west) coordinate (a) rectangle ([xshift=-24pt] struc lines.south west) coordinate (b);
+  \node[category,rotate=90] at ($(a)!.5!(b)$) {structural};
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "overview"
+%%% End:
+
