@@ -35,11 +35,12 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 
 **Gate libraries:** MCT, MPMCT
 
-**Implementations:** [RevKit](https://github.com/msoeken/cirkit/blob/master/addons/cirkit-addon-reversible/src/reversible/synthesis/exact_synthesis.cpp) (command: `exs --mode 1`)
+**Implementations:** [RevKit](https://github.com/msoeken/cirkit/blob/master/addons/cirkit-addon-reversible/src/reversible/synthesis/exact_synthesis.cpp) (command: `exs`)
 
 **References:**
 * [D. Große, R. Wille, G.W. Dueck, and R. Drechsler: Exact multiple-control Toffoli network synthesis with SAT techniques, in: *IEEE Trans. on CAD* **28**, 2009, 703&ndash;715.](http://dx.doi.org/10.1109/TCAD.2009.2017215)  
-* [R. Wille, M. Soeken, N. Przigoda, R. Drechsler: Effect of negative control lines on the exact synthesis of reversible circuits, in: *Multiple-valued Logic and Soft Computing* **21**, 2013, 627-640.](http://www.oldcitypublishing.com/MVLSC/MVLSCabstracts/MVLSC21.5-6abstracts/MVLSCv21n5-6p627-640Wille.html)
+* [R. Wille, M. Soeken, N. Przigoda, and R. Drechsler: Effect of negative control lines on the exact synthesis of reversible circuits, in: *Multiple-valued Logic and Soft Computing* **21**, 2013, 627-640.](http://www.oldcitypublishing.com/MVLSC/MVLSCabstracts/MVLSC21.5-6abstracts/MVLSCv21n5-6p627-640Wille.html)
+* [R. Wille, H.M. Le, G.W. Dueck, and D. Große: Quantified Synthesis of Reversible Logic, in: *DATE*, 2008, 1015-1020.](http://dx.doi.org/10.1109/DATE.2008.4484814)
 
 ### Functional heuristic algorithms
 Functional heuristic synthesis algorithms guarantee minimality in number of lines (space).
@@ -47,14 +48,16 @@ Functional heuristic synthesis algorithms guarantee minimality in number of line
 #### Transformation-based synthesis
 Given a truth table of a Boolean function, transformation-based synthesis applies gates and adjusts the truth table accordingly in a way that each gate application gets the truth table closer to the identity function.  If the identity function has been reached, all applied gates make up for the circuit that realizes the initial function.
 
-**Input representations:** truth table
+**Input representations:** truth table, RCBDD
 
-**Gate libraries:** MCT
+**Gate libraries:** MCT, MPMCT (only negative controls), MCT+F
 
 **Implementations:** [RevKit](https://github.com/msoeken/cirkit/blob/master/addons/cirkit-addon-reversible/src/reversible/synthesis/transformation_based_synthesis.cpp) (command: `tbs`)
 
 **References:**
-* [D.M. Miller, D. Maslov, G.W. Dueck: A transformation based algorithm for reversible logic synthesis, in: *DAC* **40**, 2003, 318-323.](http://dl.acm.org/citation.cfm?doid=775832.775915)
+* [D.M. Miller, D. Maslov, and G.W. Dueck: A transformation based algorithm for reversible logic synthesis, in: *DAC* **40**, 2003, 318-323.](http://dl.acm.org/citation.cfm?doid=775832.775915)
+* [M. Soeken, G.W. Dueck, and D.M. Miller: A fast symbolic transformation based algorithm for reversible logic synthesis, in: *RC* **8**, 2016.](http://msoeken.github.io/papers/2016_rc_1.pdf)
+* [M. Soeken and A. Chattopadhyay: Fredkin-enabled transformation-based reversible logic synthesis, in: *ISMVL* **46**, 2015, 60-65](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7238133)
 
 #### Decomposition-based methods
 
