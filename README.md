@@ -21,10 +21,10 @@ We classify reversible synthesis algorithms using 4 levels of categorization:
 
 The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli gate is a double-controlled NOT gate. These gates are universal in a sense, that every Boolean function can be realized if an arbitrary number of variables (lines) is permitted.  Given *n* variables, the NCT gate library can realize all permutations over *n* ≤ 3 variables and all even permutations over *n* > 3 variables.
 
-## Synthesis algorithms
+## Synthesis algorithms for reversible functions
 
-### Functional exact methods
-Exact synthesis methods guarantee minimality in number of gates (time) and number of lines (space).
+### Functional exact algorithms
+Exact synthesis algorithms guarantee minimality in number of gates (time) and number of lines (space).
 
 #### SAT-based synthesis
 Given a truth table of a Boolean function *f*, the decision problem “*Does there exist a reversible circuit with k gates that represents f?*” is translated into a SAT problem. A circuit can be extracted from a satisfying assignment to the problem. Asking the question, starting from *k* being 0 and incrementing it until the problem is satisfiable, gives the gate-optimum circuit.
@@ -39,8 +39,8 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 * [D. Große, R. Wille, G.W. Dueck, and R. Drechsler: Exact multiple-control Toffoli network synthesis with SAT techniques, in: *IEEE Trans. on CAD* **28**, 2009, 703&ndash;715.](http://dx.doi.org/10.1109/TCAD.2009.2017215)  
 * [R. Wille, M. Soeken, N. Przigoda, R. Drechsler: Effect of negative control lines on the exact synthesis of reversible circuits, in: *Multiple-valued Logic and Soft Computing* **21**, 2013, 627-640.](http://www.oldcitypublishing.com/MVLSC/MVLSCabstracts/MVLSC21.5-6abstracts/MVLSCv21n5-6p627-640Wille.html)
 
-### Functional heuristic methods
-Functional heuristic synthesis methods guarantee minimality in number of lines (space).
+### Functional heuristic algorithms
+Functional heuristic synthesis algorithms guarantee minimality in number of lines (space).
 
 #### Transformation-based synthesis
 Given a truth table of a Boolean function, transformation-based synthesis applies gates and adjusts the truth table accordingly in a way that each gate application gets the truth table closer to the identity function.  If the identity function has been reached, all applied gates make up for the circuit that realizes the initial function.
@@ -56,8 +56,10 @@ Given a truth table of a Boolean function, transformation-based synthesis applie
 
 #### Decomposition-based methods
 
-### Structural methods
-Structural methods do neither guarantee optimality for number of gates nor for number of lines.
+## Synthesis algorithms for nonreversible functions
+
+### Structural algorithms
+Structural algorithms do neither guarantee optimality for number of gates nor for number of lines.
 
 ## Optimization algorithms
 
