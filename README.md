@@ -59,7 +59,17 @@ Given a truth table of a Boolean function, transformation-based synthesis applie
 * [M. Soeken, G.W. Dueck, and D.M. Miller: A fast symbolic transformation based algorithm for reversible logic synthesis, in: *RC* **8**, 2016.](http://msoeken.github.io/papers/2016_rc_1.pdf)
 * [M. Soeken and A. Chattopadhyay: Fredkin-enabled transformation-based reversible logic synthesis, in: *ISMVL* **46**, 2015, 60-65](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7238133)
 
-#### Decomposition-based methods
+#### Decomposition-based synthesis
+
+#### Greedy synthesis
+Greedy synthesis is similar to transformation-based synthesis.  At each step it applies a set of gates to the current function to be synthesized and chooses the gate that brings the function closest to the identity function.
+
+**Input representation:** BDD
+
+**Gate libraries:** arbitrary
+
+**References:**
+* [P. Kerntopf: A new heuristic algorithm for reversible logic synthesis, in: *DAC* **41**, 2004, 834-837.](http://dl.acm.org/citation.cfm?id=996789)
 
 ## Synthesis algorithms for nonreversible functions
 
