@@ -46,7 +46,7 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 Functional heuristic synthesis algorithms guarantee minimality in number of lines (space).
 
 #### Transformation-based synthesis
-Given a truth table of a Boolean function, transformation-based synthesis applies gates and adjusts the truth table accordingly in a way that each gate application gets the truth table closer to the identity function.  If the identity function has been reached, all applied gates make up for the circuit that realizes the initial function.
+Starting from a reversible function, transformation-based synthesis applies gates and adjusts the function representation accordingly in a way that each gate application gets the function closer to the identity function.  If the identity function has been reached, all applied gates make up for the circuit that realizes the initial function.
 
 **Input representations:** truth table, RCBDD
 
