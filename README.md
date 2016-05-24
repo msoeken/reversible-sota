@@ -1,5 +1,22 @@
 # State-of-the-art in reversible logic synthesis
 
+#### Table of Contents
+
+- [Overview](#overview)
+- [Gate libraries](#gate-libraries)
+	- [NCT (Not, CNOT, Toffoli)](#nct-not-cnot-toffoli)
+- [Embedding](#embedding)
+- [Synthesis algorithms for reversible functions](#synthesis-algorithms-for-reversible-functions)
+	- [Functional exact algorithms](#functional-exact-algorithms)
+		- [SAT-based synthesis](#sat-based-synthesis)
+	- [Functional heuristic algorithms](#functional-heuristic-algorithms)
+		- [Transformation-based synthesis](#transformation-based-synthesis)
+		- [Decomposition-based synthesis](#decomposition-based-synthesis)
+		- [Greedy synthesis](#greedy-synthesis)
+- [Synthesis algorithms for nonreversible functions](#synthesis-algorithms-for-nonreversible-functions)
+	- [Structural algorithms](#structural-algorithms)
+- [Historical remarks](#historical-remarks)
+
 ## Overview
 
 ![Overview](data/overview.png)
@@ -22,6 +39,8 @@ We classify reversible synthesis algorithms using 4 levels of categorization:
 | ![NOT](data/not.png) | ![CNOT](data/cnot.png) | ![Toffoli](data/toffoli.png) |
 
 The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli gate is a double-controlled NOT gate. These gates are universal in a sense, that every Boolean function can be realized if an arbitrary number of variables (lines) is permitted.  Given *n* variables, the NCT gate library can realize all permutations over *n* ≤ 3 variables and all even permutations over *n* > 3 variables.
+
+## Embedding
 
 ## Synthesis algorithms for reversible functions
 
@@ -87,5 +106,4 @@ Greedy synthesis is similar to transformation-based synthesis.  At each step it 
 ### Structural algorithms
 Structural algorithms do neither guarantee optimality for number of gates nor for number of lines.
 
-## Optimization algorithms
-
+## Historical remarks
