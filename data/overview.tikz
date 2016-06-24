@@ -12,7 +12,7 @@
   cost block/.style={block,fill=gray!10!white,minimum width=35pt,font=\normalsize},
   algorithm block/.style={block,fill=gray!30!white,align=left},
   functional exact/.style={minimum height=40pt},
-  functional heur/.style={minimum height=55pt},
+  functional heur/.style={minimum height=65pt},
   structural/.style={minimum height=55pt}
 }
 
@@ -48,6 +48,7 @@
       \begin{algitems}
         \item Transformation-based synthesis
         \item Decomposition-based synthesis
+        \item Metaheuristic synthesis
         \item Greedy synthesis
       \end{algitems}
     }
