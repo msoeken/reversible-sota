@@ -12,6 +12,7 @@
 	- [Functional heuristic algorithms](#functional-heuristic-algorithms)
 		- [Transformation-based synthesis](#transformation-based-synthesis)
 		- [Decomposition-based synthesis](#decomposition-based-synthesis)
+		- [Metehauristic synthesis](#metaheuristic-synthesis)
 		- [Greedy synthesis](#greedy-synthesis)
 - [Synthesis algorithms for nonreversible functions](#synthesis-algorithms-for-nonreversible-functions)
 	- [Structural algorithms](#structural-algorithms)
@@ -95,6 +96,9 @@ In decomposition-based synthesis the reversible function is iteratively decompos
 **References:**
 * [A. De Vos and Y. Van Rentergem: Young subgroups for reversible computers, in: *Adv. in Math. of Comm.* **2**, 2008, 183-200.](http://dx.doi.org/10.3934/amc.2008.2.183)
 * [M. Soeken, L. Tague, G.W. Dueck, and R. Drechsler: Ancilla-free synthesis of large reversible functions using binary decision diagrams, in: *J. Symb. Comput.* **73**, 2016, 1-26.](http://dx.doi.org/10.1016/j.jsc.2015.03.002)
+
+#### Metaheuristic synthesis
+Synthesis in these category synthesize a circuit based on a metaheuristic such as genetic algorithms.
 
 #### Greedy synthesis
 Greedy synthesis is similar to transformation-based synthesis.  At each step it applies a set of gates to the current function to be synthesized and chooses the gate that brings the function closest to the identity function.
