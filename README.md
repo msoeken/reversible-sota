@@ -17,6 +17,7 @@
 		- [Greedy synthesis](#greedy-synthesis)
 - [Synthesis algorithms for nonreversible functions](#synthesis-algorithms-for-nonreversible-functions)
 	- [Structural algorithms](#structural-algorithms)
+		- [ESOP-based synthesis] (#esop-based-synthesis)
 		- [Hierarchical synthesis](#hierarchical-synthesis)
 		- [Building block synthesis](#building-block-synthesis)
 - [Historical remarks](#historical-remarks)
@@ -170,6 +171,14 @@ Greedy synthesis is similar to transformation-based synthesis.  At each step it 
 
 ### Structural algorithms
 Structural algorithms do neither guarantee optimality for number of gates nor for number of lines.
+
+#### ESOP-based synthesis
+**TODO**
+
+**References:**
+- [R. Drechsler, A. Finder, R. Wille: Improving ESOP-based synthesis of reversible logic using evolutionary algorithms. *EvoApplications*, 2011, 151-161.](http://dx.doi.org/10.1109/ETS.2011.34)
+
+  This paper shows how evolutionary algorithms may be used to obtain reversivle circuits based on structural techniques used for irreversible design.
 
 #### Hierarchical synthesis
 In hierarchical synthesis the function is represented in a structural way, e.g., using a logic network. Then, small subparts of the structure are considered functionally, embedded into reversible functions and synthesized using functional algorithms.  The resulting reversible circuits are combined with respect to the structural representation of the function.  This combination of subcircuits leads to an additional number of lines, which are essentially required to store intermediate computation steps.
