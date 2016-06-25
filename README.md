@@ -9,6 +9,7 @@
 - [Synthesis algorithms for reversible functions](#synthesis-algorithms-for-reversible-functions)
 	- [Functional exact algorithms](#functional-exact-algorithms)
 		- [SAT-based synthesis](#sat-based-synthesis)
+		- [Enumerative synthesis](#enumerative-synthesis)
 	- [Functional heuristic algorithms](#functional-heuristic-algorithms)
 		- [Transformation-based synthesis](#transformation-based-synthesis)
 		- [Decomposition-based synthesis](#decomposition-based-synthesis)
@@ -63,6 +64,24 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 * [R. Wille, M. Soeken, N. Przigoda, and R. Drechsler: Effect of negative control lines on the exact synthesis of reversible circuits, in: *Multiple-valued Logic and Soft Computing* **21**, 2013, 627-640.](http://www.oldcitypublishing.com/MVLSC/MVLSCabstracts/MVLSC21.5-6abstracts/MVLSCv21n5-6p627-640Wille.html)
 * [R. Wille, H.M. Le, G.W. Dueck, and D. Große: Quantified Synthesis of Reversible Logic, in: *DATE*, 2008, 1015-1020.](http://dx.doi.org/10.1109/DATE.2008.4484814)
 
+#### Enumerative synthesis
+**TODO**
+
+**Input representations:** truth table
+
+**Gate libraries:** MCT, MPMCT
+
+**References:**
+* [O. Golubitsky, S.M. Falconer, and D. Maslov: Synthesis of the optimal 4-bit reversible circuits, in *DAC* **47**, 2010, 653-656.](http://doi.acm.org/10.1145/1837274.1837440)
+
+  **TODO**
+* [O. Golubitsky and D. Maslov: A study of optimal 4-Bit reversible Toffoli circuits and their synthesis, in: *IEEE Trans. Computers* **61**, 2012, 1341-1353.](http://dx.doi.org/10.1109/TC.2011.144)
+
+  **TODO**
+* [M. Szyprowski and P. Kerntopf: Optimal 4-bit reversible mixed-polarity Toffoli circuits, in *RC* **4**, 2012, 138-151.](http://dx.doi.org/10.1007/978-3-642-36315-3_11)
+
+  **TODO**
+
 ### Functional heuristic algorithms
 Functional heuristic synthesis algorithms guarantee minimality in number of lines (space).
 
@@ -102,7 +121,7 @@ In decomposition-based synthesis the reversible function is iteratively decompos
 #### Metaheuristic synthesis
 Synthesis in these category synthesize a circuit based on a metaheuristic such as genetic algorithms.
 
-**Input representation:** Truth table
+**Input representation:** truth table
 
 **Gate libraries:** MCT
 
@@ -143,3 +162,4 @@ Reversible logic synthesis via biconditional binary decision diagrams, in: *ISMV
 Hierarchical synthesis of reversible circuits using positive and negative Davio decomposition, in: *IDT* **5**, 2010, 143-148.](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5724427)
 
 ## Historical remarks
+**TODO**
