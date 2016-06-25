@@ -17,7 +17,8 @@
 		- [Greedy synthesis](#greedy-synthesis)
 - [Synthesis algorithms for nonreversible functions](#synthesis-algorithms-for-nonreversible-functions)
 	- [Structural algorithms](#structural-algorithms)
-		- [Hierarchical synthesis](#hierarchical-synthesis) 
+		- [Hierarchical synthesis](#hierarchical-synthesis)
+		- [Building block synthesis](#building-block-synthesis)
 - [Historical remarks](#historical-remarks)
 
 ## Overview
@@ -160,6 +161,18 @@ Reversible logic synthesis via biconditional binary decision diagrams, in: *ISMV
 * [M. Krishna and Anupam Chattopadhyay: Efficient reversible logic synthesis via isomorphic subgraph matching, in: *ISMVL* **44**, 2014, 103-108.](http://dx.doi.org/10.1109/ISMVL.2014.26)
 * [M. Soeken, R. Wille, and R. Drechsler:
 Hierarchical synthesis of reversible circuits using positive and negative Davio decomposition, in: *IDT* **5**, 2010, 143-148.](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5724427)
+
+#### Building block synthesis
+**TODO**
+
+**Input representation:** SyReC description
+
+**Gate libraries:** MCT, MPMCT
+
+**References:**
+* [R. Wille, S. Offermann, and R. Drechsler: SyReC: A programming language for synthesis of reversible circuits, in: *FDL* **13**, 2010, 184-189.](http://www.informatik.uni-bremen.de/agra/doc/konf/10_syrec_reversible_hardware_language.pdf)
+* [R. Wille, M. Soeken, E. Schönborn, and R. Drechsler: Circuit line minimization in the HDL-based synthesis of reversible logic, in *ISVLSI*, 2012, 213-218.](http://dx.doi.org/10.1109/ISVLSI.2012.43)
+* [R. Wille, E. Schönborn, M. Soeken, and R. Drechsler: SyReC: A hardware description language for the specification and synthesis of reversible circuits, in: *Integration* **53**, 2016, 39-53.](http://dx.doi.org/10.1016/j.vlsi.2015.10.001)
 
 ## Historical remarks
 **TODO**
