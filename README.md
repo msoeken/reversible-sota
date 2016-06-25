@@ -102,6 +102,13 @@ In decomposition-based synthesis the reversible function is iteratively decompos
 #### Metaheuristic synthesis
 Synthesis in these category synthesize a circuit based on a metaheuristic such as genetic algorithms.
 
+**Input representation:** Truth table
+
+**Gate libraries:** MCT
+
+**References:**
+* [F.Z. Hadjam and C. Moraga: RIMEP2: Evolutionary design of reversible digital circuits, in *JETC* **11**, 2014, 27:1-27:23.](http://dl.acm.org/citation.cfm?doid=2629534)
+
 #### Greedy synthesis
 Greedy synthesis is similar to transformation-based synthesis.  At each step it applies a set of gates to the current function to be synthesized and chooses the gate that brings the function closest to the identity function.
 
