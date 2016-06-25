@@ -44,7 +44,16 @@ We classify reversible synthesis algorithms using 4 levels of categorization:
 
 The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli gate is a double-controlled NOT gate. These gates are universal in a sense, that every Boolean function can be realized if an arbitrary number of variables (lines) is permitted.  Given *n* variables, the NCT gate library can realize all permutations over *n* ≤ 3 variables and all even permutations over *n* > 3 variables.
 
+### STG (Single-target gates)
+
+| Single-target-gate   |
+| -------------------- |
+| ![STG](data/stg.png) |
+
+**TODO**
+
 ## Embedding
+**TODO**
 
 ## Synthesis algorithms for reversible functions
 
