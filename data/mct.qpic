@@ -1,0 +1,5 @@
+a W x_1 x_1
+...b W
+c W x_{n-1} x_{n-1}
+d W x_n x_n\oplus{x_1\cdots{x_{n-1}}}
+a c +d
