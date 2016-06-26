@@ -173,10 +173,18 @@ Greedy synthesis is similar to transformation-based synthesis.  At each step it 
 Structural algorithms do neither guarantee optimality for number of gates nor for number of lines.
 
 #### ESOP-based synthesis
-**TODO**
+An ESOP expression of a function *f* is an exclusive sum of products.  Given an ESOP expression of a function, it can easily be translated into a cascade of Toffoli gates by adding one additional circuit line to store the result. This line is initialized with 0 and for each product term in the ESOP expression a MPMCT gate is added with controls according to the produc term and a target on the additional line. If MCT circuits are targeted, negative controls can be realized using NOT gates. In this case, the aim is to minimize the number of NOT gates.
+
+**Gate libraries:** MCT, MPMCT
+
+**Implementations:** [RevKit](https://github.com/msoeken/cirkit/blob/master/addons/cirkit-addon-reversible/src/reversible/synthesis/esop_synthesis.cpp) (command: `esopbs`)
 
 **References:**
-- [R. Drechsler, A. Finder, R. Wille: Improving ESOP-based synthesis of reversible logic using evolutionary algorithms. *EvoApplications*, 2011, 151-161.](http://dx.doi.org/10.1109/ETS.2011.34)
+- [K. Fazel, M.A. Thornton, and J.E. Rice: ESOP-based Toffoli gate cascade generation, in: *PACRIM*, 2007, 206-209.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.79.2392&rep=rep1&type=pdf)
+
+  This paper introduces the idea of ESOP-based reversible logic synthesis.
+
+- [R. Drechsler, A. Finder, and R. Wille: Improving ESOP-based synthesis of reversible logic using evolutionary algorithms, in: *EvoApplications*, 2011, 151-161.](http://dx.doi.org/10.1109/ETS.2011.34)
 
   This paper shows how evolutionary algorithms may be used to obtain reversivle circuits based on structural techniques used for irreversible design.
 
