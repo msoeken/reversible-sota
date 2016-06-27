@@ -137,7 +137,12 @@ In decomposition-based synthesis the reversible function is iteratively decompos
 
 **References:**
 * [A. De Vos and Y. Van Rentergem: Young subgroups for reversible computers, in: *Adv. in Math. of Comm.* **2**, 2008, 183-200.](http://dx.doi.org/10.3934/amc.2008.2.183)
+
+  This paper introduced the theoretical background for decomposition-based synthesis and proved the main decomposition rule explained above. The proofs involve Young subgroups, however, the synthesis algorithm derived from it, is quite straightforward.  It computes new truth tables for each single-target gate in the circuit in a way that the propery of the decomposition is uphold. 
+
 * [M. Soeken, L. Tague, G.W. Dueck, and R. Drechsler: Ancilla-free synthesis of large reversible functions using binary decision diagrams, in: *J. Symb. Comput.* **73**, 2016, 1-26.](http://dx.doi.org/10.1016/j.jsc.2015.03.002)
+
+  This paper proposes a symbolic variant of the truth table based variant introduced by De Vos and Van Rentergem.  It works on the binary decision diagram representation of the reversible function. The paper also introduces how simple algebraric operations can be performed on the BDD representation of reversible functions, e.g., gate composition or reversibility checking.
 
 #### Metaheuristic synthesis
 Synthesis in these category synthesize a circuit based on a metaheuristic such as genetic algorithms, genetic programming, ant colony optimization, or particle swarm optimization.
