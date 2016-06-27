@@ -82,8 +82,13 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 
 **References:**
 * [D. Große, R. Wille, G.W. Dueck, and R. Drechsler: Exact multiple-control Toffoli network synthesis with SAT techniques, in: *IEEE Trans. on CAD* **28**, 2009, 703&ndash;715.](http://dx.doi.org/10.1109/TCAD.2009.2017215)  
+
+* This paper presented exact synthesis algorithms that find the MCT circuit with the minimal number of gates for a given reversible function. The introduced algorithms formulate the synthesis problem as a sequence of decision problems. The decision problems are encoded as Boolean satisfiability (SAT) or SAT modulo theory (SMT) instances, respectively. 
+
 * [R. Wille, M. Soeken, N. Przigoda, and R. Drechsler: Effect of negative control lines on the exact synthesis of reversible circuits, in: *Multiple-valued Logic and Soft Computing* **21**, 2013, 627-640.](http://www.oldcitypublishing.com/MVLSC/MVLSCabstracts/MVLSC21.5-6abstracts/MVLSCv21n5-6p627-640Wille.html)
-* [R. Wille, H.M. Le, G.W. Dueck, and D. Große: Quantified Synthesis of Reversible Logic, in: *DATE*, 2008, 1015-1020.](http://dx.doi.org/10.1109/DATE.2008.4484814)
+
+* This paper extended the scope of exact synthesis algorithms by considering MPMCT gates in the synthesis problem.
+
 
 #### Enumerative synthesis
 Enumerative synthesis algorithms guarantee minimality in number of gates or quantum cost.
