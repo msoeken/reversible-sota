@@ -86,7 +86,7 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 * [R. Wille, H.M. Le, G.W. Dueck, and D. Große: Quantified Synthesis of Reversible Logic, in: *DATE*, 2008, 1015-1020.](http://dx.doi.org/10.1109/DATE.2008.4484814)
 
 #### Enumerative synthesis
-Enumerative synthesis synthesis algorithms guarantee minimality in number of gates or quantum cost.
+Enumerative synthesis algorithms guarantee minimality in number of gates or quantum cost.
 
 **Input representations:** truth table
 
