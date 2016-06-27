@@ -93,15 +93,17 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 **Gate libraries:** MCT, MPMCT
 
 **References:**
-* [O. Golubitsky, S.M. Falconer, and D. Maslov: Synthesis of the optimal 4-bit reversible circuits, in *DAC* **47**, 2010, 653-656.](http://doi.acm.org/10.1145/1837274.1837440)
+* [A. K. Prasad , V. V. Shende , K. N. Patel , I. L. Markov , and J. P. Hayes: Data structures and algorithms for simplifying reversible circuits, in: *ACM JTEC* **2**, 2006, 277-293.](http://dl.acm.org/citation.cfm?id=1216399)
 
-  **TODO**
+This paper presents an algorithm that generates a library of optimal realisations for small reversible circuits. This labrary is used afterwards to synthesize and store optimal circuits for all 3-bit reversible reversible functions, and millions of 4-bit circuits.
+
 * [O. Golubitsky and D. Maslov: A study of optimal 4-Bit reversible Toffoli circuits and their synthesis, in: *IEEE Trans. Computers* **61**, 2012, 1341-1353.](http://dx.doi.org/10.1109/TC.2011.144)
 
-  **TODO**
+This paper presents  two algorithms: one, that synthesizes an optimal circuit for any 4-bit reversible function, and another that synthesizes all gate-count optimal circuits using the MCT library.
+
 * [M. Szyprowski and P. Kerntopf: Optimal 4-bit reversible mixed-polarity Toffoli circuits, in *RC* **4**, 2012, 138-151.](http://dx.doi.org/10.1007/978-3-642-36315-3_11)
 
-  **TODO**
+This paper presents the gate-count optimal circuits for any 4-bit reversible function built from MPMCT library. 
 
 ### Functional heuristic algorithms
 Functional heuristic synthesis algorithms guarantee minimality in number of lines (space).
