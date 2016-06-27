@@ -95,7 +95,7 @@ Given a truth table of a Boolean function *f*, the decision problem “*Does the
 **References:**
 * [A. K. Prasad , V. V. Shende , K. N. Patel , I. L. Markov , and J. P. Hayes: Data structures and algorithms for simplifying reversible circuits, in: *ACM JTEC* **2**, 2006, 277-293.](http://dl.acm.org/citation.cfm?id=1216399)
 
-  This paper presents an algorithm that generates a library of optimal realisations for small reversible circuits. This library is used afterwards to synthesize optimal circuits for all 3-bit reversible reversible functions, and millions of 4-bit circuits.
+  This paper presents an algorithm that generates a library of optimal realisations for small reversible circuits. This library is used afterwards to synthesize optimal circuits for all 3-bit reversible functions, and millions of 4-bit circuits.
 
 * [O. Golubitsky and D. Maslov: A study of optimal 4-Bit reversible Toffoli circuits and their synthesis, in: *IEEE Trans. Computers* **61**, 2012, 1341-1353.](http://dx.doi.org/10.1109/TC.2011.144)
 
