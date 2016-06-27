@@ -1,0 +1,4 @@
+a W x x
+b W y y\oplus{x}
+c W z {z\oplus{xy}}
+a b +c ; a +b
