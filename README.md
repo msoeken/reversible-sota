@@ -6,6 +6,7 @@
 - [Gate libraries](#gate-libraries)
 	- [NCT (Not, CNOT, Toffoli)](#nct-not-cnot-toffoli)
 	- [MCT (Multiple-controlled Toffoli gates)](#mct-multiple-controlled-toffoli-gates)
+	- [MPMCT (Mixed-polarity Multiple-controlled Toffoli gates)](#mpmct-mixed-polarity-multiple-controlled-toffoli-gates)
 	- [STG (Single-target gates)](#stg-single-target-gates)
 - [Embedding](#embedding)
 - [Synthesis algorithms for reversible functions](#synthesis-algorithms-for-reversible-functions)
@@ -52,6 +53,12 @@ The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli
 | MCT                  |
 | -------------------- |
 | ![MCT](data/mct.png) |
+
+### MPMCT (Mixed-polarity Multiple-controlled Toffoli gates)
+
+| MPMCT                  |
+| -------------------- |
+| ![MPMCT](data/mpmct.png) |
 
 **TODO**
 
