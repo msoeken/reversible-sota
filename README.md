@@ -136,8 +136,12 @@ Starting from a reversible function, transformation-based synthesis applies gate
   This paper extends the transformation based synthesis algorithm by applying a heuristic approach to optimize the generated circuits. The major enhancement to the basic algorithm is using a template simplification tool, a tool which allows further reduction of the networks produced by the synthesis algorithm. A templates is a circuit of gates that realizes the identity function.
 
 * [D. Maslov, G.W. Dueck, and D.M. Miller: Synthesis of Fredkin-Toffoli reversible networks, in: *IEEE Trans. VLSI Syst.* **13**, 2005, 765-769.](http://dx.doi.org/10.1109/TVLSI.2005.844284)
- 
+
+   This paper presents a new variant of the transformation based synthesis that uses not only MCT gates but also Fredkin gates for generating reversible circuits.
+
 * [M. Soeken, R. Wille, C. Hilken, N. Przigoda, and R. Drechsler: Synthesis of reversible circuits with minimal lines for large functions, in: *ASP-DAC* **17**, 2012, 85-92.](http://dx.doi.org/10.1109/ASPDAC.2012.6165069)
+
+  This paper presents a solution to the scalability limitation of the transformation based reversible logic synthesis algorithm for constructing ancilla-free reversible circuits. The introduced algorithm used Quantum Multiple-valued Decision Diagrams (QMDDs) instead of truth tables in the synthesis of reversible functions. The representation of reversible functions based on QMDDs enables the automatic synthesis of large functions with the minimal number of circuit lines.
 
 * [M. Soeken and A. Chattopadhyay: Fredkin-enabled transformation-based reversible logic synthesis, in: *ISMVL* **46**, 2015, 60-65.](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7238133)
 
