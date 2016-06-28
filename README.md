@@ -54,7 +54,7 @@ The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli
 | -------------------- |
 | ![MCT](data/mct.png) |
 
-The MCT Library consist of  NOT, CNOT, Toffoli, and multi-controlled NOT gates.  An MCT gate with n variables has (n-1) control and a target. Each of the control line values pass through the gate unaltered while the target line value is inverted if all the control lines  are set to ‘1’ .
+The MCT library consist of  NOT, CNOT, Toffoli, and multi-controlled NOT gates.  An MCT gate with *n* variables has *(n-1)* controls and one target. Each of the control line values pass through the gate unaltered while the target line value is inverted if all the control lines are set to 1.
 
 ### MPMCT (Mixed-polarity Multiple-controlled Toffoli gates)
 
@@ -62,7 +62,7 @@ The MCT Library consist of  NOT, CNOT, Toffoli, and multi-controlled NOT gates. 
 | -------------------- |
 | ![MPMCT](data/mpmct.png) |
 
-The MPMCT Library is a general form of the MCT library. The controls of the MPMCT gates could have not only positive polarity but also negative polarity. In this case, the target line value is inverted if all the positive control lines are set to ‘1’ and all the negative control lines  are set to ‘0’ .
+The MPMCT library is more general than the MCT library. The controls of the MPMCT gates cannot only have positive polarity but also negative polarity. In this case, the target line value is inverted if all the positive control lines are set to 1 and all the negative control lines are set to 0.
 
 ### STG (Single-target gates)
 
@@ -70,7 +70,7 @@ The MPMCT Library is a general form of the MCT library. The controls of the MPMC
 | -------------------- |
 | ![STG](data/stg.png) |
 
- Given *n* variables, a single-target gate (ST) has a control function **C** instead of control variables. The control function is a Boolean function with *(n-1)*-input and *1*-output.The target line is inverted if and only if **C** evaluates to true. All other variables remain unchanged.
+Given *n* variables, a single-target gate (ST) has a control function *c* instead of control variables. The control function is a Boolean function with *(n-1)* inputs and one output. The target line is inverted if and only if *C* evaluates to true. All other variables remain unchanged.  The target line cannot be in the support of *c*.
 
 ## Embedding
 **TODO**
@@ -170,7 +170,7 @@ Starting from a reversible function, transformation-based synthesis applies gate
 
 * [D. Maslov, G.W. Dueck, and D.M. Miller: Synthesis of Fredkin-Toffoli reversible networks, in: *IEEE Trans. VLSI Syst.* **13**, 2005, 765-769.](http://dx.doi.org/10.1109/TVLSI.2005.844284)
 
-   This paper presents a new variant of the transformation based synthesis that uses not only MCT gates but also Fredkin gates for generating reversible circuits.
+  This paper presents a new variant of the transformation based synthesis that uses not only MCT gates but also Fredkin gates for generating reversible circuits.
 
 * [M. Soeken, R. Wille, C. Hilken, N. Przigoda, and R. Drechsler: Synthesis of reversible circuits with minimal lines for large functions, in: *ASP-DAC* **17**, 2012, 85-92.](http://dx.doi.org/10.1109/ASPDAC.2012.6165069)
 
@@ -181,7 +181,8 @@ Starting from a reversible function, transformation-based synthesis applies gate
   This paper presents a symbolic variant of the transformation based synthesis approach for reversible logic. The approach allows the realization of larger reversible functions without additional ancilla lines. It exploits a property considering the ordering in which assignments need to be considered for adjustment. Both a BDD and a SAT based implementation of the symbolic synthesis algorithm have been presented.
   
 * [M. Soeken and A. Chattopadhyay: Fredkin-enabled transformation-based reversible logic synthesis, in: *ISMVL* **46**, 2015, 60-65.](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7238133)
-**TODO**
+
+  This paper presents an extension to the transformation based synthesis algorithm that exploits Fredkin gates.  By employing a look-ahead technique, more Fredkin gates can be added to the circuit overall leading in smaller gate count.
 
 #### Decomposition-based synthesis
 In decomposition-based synthesis the reversible function is iteratively decomposed into simpler functions based on the  *Young subgroup decomposition*: Given a line *i*, every reversible function *f* can be decomposed into three functions *f = g<sub>1</sub>* ○ *f'* ○ *g<sub>2</sub>*, where *g<sub>1</sub>* and *g<sub>2</sub>* can be realized with a single-target gate on line *i* and *f'* is a reversible function that does not change in line *i*. Based on this decomposition, synthesis algorithms determine the gates for *g<sub>1</sub>* and *g<sub>2</sub>* and then recur on *f'*.
