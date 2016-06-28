@@ -132,7 +132,9 @@ Starting from a reversible function, transformation-based synthesis applies gate
   This paper first introduced the transformation based synthesis algorithm.  It descibes first the basic unidirectional version but also the bidirectional variant which often results in circuits of smaller size.
   
 * [D. Maslov, G.W. Dueck, and D.M. Miller: Toffoli network synthesis with templates, in: *IEEE Trans. on CAD of Integrated Circuits and Systems* **24**, 2005, 807-817.](http://dx.doi.org/10.1109/TCAD.2005.847911)
-  
+
+  This paper extends the transformation based synthesis algorithm by applying a heuristic approach to optimize the generated circuits. The major enhancement to the basic algorithm is using a template simplification tool, a tool which allows further reduction of the networks produced by the synthesis algorithm. A templates is a circuit of gates that realizes the identity function.
+
 * [D. Maslov, G.W. Dueck, and D.M. Miller: Synthesis of Fredkin-Toffoli reversible networks, in: *IEEE Trans. VLSI Syst.* **13**, 2005, 765-769.](http://dx.doi.org/10.1109/TVLSI.2005.844284)
  
 * [M. Soeken, R. Wille, C. Hilken, N. Przigoda, and R. Drechsler: Synthesis of reversible circuits with minimal lines for large functions, in: *ASP-DAC* **17**, 2012, 85-92.](http://dx.doi.org/10.1109/ASPDAC.2012.6165069)
