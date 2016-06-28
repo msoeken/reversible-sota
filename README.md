@@ -185,7 +185,7 @@ Greedy synthesis is similar to transformation-based synthesis.  At each step it 
 **References:**
 * [P. Kerntopf: A new heuristic algorithm for reversible logic synthesis, in: *DAC* **41**, 2004, 834-837.](http://dl.acm.org/citation.cfm?id=996789)
 
-* This paper proposes an incremental approach to reversible logic synthesis using shared binary decision diagrams (SBDD) for the representation of reversible functions and for measuring their complexity.
+  This paper proposes an incremental approach to reversible logic synthesis using shared binary decision diagrams (SBDD) for the representation of reversible functions and for measuring their complexity.
 
 ## Synthesis algorithms for nonreversible functions
 
