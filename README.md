@@ -54,13 +54,15 @@ The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli
 | -------------------- |
 | ![MCT](data/mct.png) |
 
+The MCT Library consist of  NOT, CNOT, Toffoli, and multi-controlled NOT gates.  An MCT gate with n variables has (n-1) control and a target. Each of the control line values pass through the gate unaltered while the target line value is inverted if all the control lines  are set to ‘1’ .
+
 ### MPMCT (Mixed-polarity Multiple-controlled Toffoli gates)
 
 | MPMCT                  |
 | -------------------- |
 | ![MPMCT](data/mpmct.png) |
 
-**TODO**
+The MPMCT Library is a general form of the MCT library. The controls of the MPMCT gates could have not only positive polarity but also negative polarity. In this case, the target line value is inverted if all the positive control lines are set to ‘1’ and all the negative control lines  are set to ‘0’ .
 
 ### STG (Single-target gates)
 
@@ -68,7 +70,7 @@ The NCT library consists of the three gates NOT, CNOT, and Toffoli.  The Toffoli
 | -------------------- |
 | ![STG](data/stg.png) |
 
-**TODO**
+ Given *n* variables, a single-target gate (ST) has a control function **C** instead of control variables. The control function is a Boolean function with *(n-1)*-input and *1*-output.The target line is inverted if and only if **C** evaluates to true. All other variables remain unchanged.
 
 ## Embedding
 **TODO**
