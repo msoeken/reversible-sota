@@ -23,7 +23,6 @@
 		- [ESOP-based synthesis](#esop-based-synthesis)
 		- [Hierarchical synthesis](#hierarchical-synthesis)
 		- [Building block synthesis](#building-block-synthesis)
-- [Historical remarks](#historical-remarks)
 
 ## Overview
 
@@ -293,7 +292,7 @@ in: *Facta Universitatis, Series E.E.* **28**, 2015, 251-262.](http://www.doiser
   This paper applies hierarchical synthesis to a higher level compared to decision diagrams.  The irreversible input function is represented as an And-inverter graph (AIG).  Subgraphs in the AIG are determined, which are then optimally embeded and synthesized using symbolic functional heuristic algorithms.
 
 #### Building block synthesis
-Building block synthesis relies on existing realizations of frequently used functions/operations as well as a higher level description of the functionality to be synthesized e.g. in terms of hardware description languages (HDLs). By this it represents a complementary approach to the synthesis approaches reviewed above: The function to be synthesized is described in HDL terms, while existing building blocks are employed to create the corresponding netlists. Main challenges remain the composition of the respectively described data and control flow.
+Building block synthesis relies on existing realizations of frequently used functions/operations as well as a higher level description of the functionality to be synthesized, e.g., in terms of hardware description languages (HDLs). It represents a complementary approach to the synthesis approaches reviewed above: The function to be synthesized is described in HDL terms, while existing building blocks are employed to create the corresponding netlists. Main challenges remain the composition of the respectively described data and control flow.
 
 **Input representation:** SyReC description
 
@@ -301,13 +300,13 @@ Building block synthesis relies on existing realizations of frequently used func
 
 **References:**
 * [R. Wille, S. Offermann, and R. Drechsler: SyReC: A programming language for synthesis of reversible circuits, in: *FDL* **13**, 2010, 184-189.](http://www.informatik.uni-bremen.de/agra/doc/konf/10_syrec_reversible_hardware_language.pdf)
-This paper presents on of the first proposals of a HDL for reversible logic and a corresponding synthesis approach. It extends the reversible software language Janus by dedicated construct usually needed in hardware design as well as a corresponding synthesis scheme. For the first time, this allowed the automatic synthesis of complex functionality provided in a higher level of abstraction.
+
+  This paper presents one of the first proposals of a HDL for reversible logic and a corresponding synthesis approach. It extends the reversible software language Janus by dedicated constructs usually needed in hardware design as well as a corresponding synthesis scheme. For the first time, this allowed the automatic synthesis of complex functionality provided in a higher level of abstraction.
 
 * [R. Wille, M. Soeken, E. Schönborn, and R. Drechsler: Circuit line minimization in the HDL-based synthesis of reversible logic, in *ISVLSI*, 2012, 213-218.](http://dx.doi.org/10.1109/ISVLSI.2012.43)
-This paper introduced optimizations of the SyReC-based synthesis scheme. It particularly incorporated the concept of reversible undo which led to circuit that require a significantly smaller number of required circuit lines. Moreover, the resulting circuits are purely reversible and do not include (arbitrarily assigned) garbage outputs anymore.
+
+  This paper introduced optimizations of the SyReC-based synthesis scheme. It particularly incorporated the concept of reversible undo which led to circuit that require a significantly smaller number of required circuit lines. Moreover, the resulting circuits are purely reversible and do not include (arbitrarily assigned) garbage outputs anymore.
 
 * [R. Wille, E. Schönborn, M. Soeken, and R. Drechsler: SyReC: A hardware description language for the specification and synthesis of reversible circuits, in: *Integration* **53**, 2016, 39-53.](http://dx.doi.org/10.1016/j.vlsi.2015.10.001)
-This paper presents the findings proposed before in a more comprehensive fashion -- including a grammar of the proposed SyReC language as well as detailed description of the synthesis for the data and control flow.
 
-## Historical remarks
-**TODO**
+  This paper presents the findings proposed before in a more comprehensive fashion, including a grammar of the proposed SyReC language as well as detailed description of the synthesis for the data and control flow.
