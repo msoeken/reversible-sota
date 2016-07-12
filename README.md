@@ -3,6 +3,9 @@
 #### Table of Contents
 
 - [Overview](#overview)
+- [Function representations](#function-representations)
+	- [Representations for irreversible functions](#representations-for-irreversible-functions)
+	- [Representations for reversible functions](#representations-for-reversible-functions)
 - [Gate libraries](#gate-libraries)
 	- [NCT (Not, CNOT, Toffoli)](#nct-not-cnot-toffoli)
 	- [MCT (Multiple-controlled Toffoli gates)](#mct-multiple-controlled-toffoli-gates)
@@ -37,6 +40,16 @@ We classify reversible synthesis algorithms using 4 levels of categorization:
 4. **Implementation**: Each algorithm can be implemented in several different ways using several different data structures for the input representation.  This level is not visible in the overview figure but discussed in the following text.
 
 **Example**: The original transformation-based synthesis algorithm from D.M. Miller, D. Maslov and G.W. Dueck [[*DAC* **40**, 2003, 318-323.]](http://dl.acm.org/citation.cfm?doid=775832.775915) starts from a *reversible input function* (1) and it is *functional* (2).  Obviously, it falls in the category of *transformation-based synthesis* algorithms (3) and the specific works marks one of many implementations in this category (4).
+
+## Function representations
+
+We differentiate representations based on whether they are used to represent irreversible or reversible functions.  Of course, irreversible functions include the reversible ones, but the function representation is not capturing this in the sense that it does not allow for dedicated treatment. Instead, function representations for reversible functions naturally reflect the reversibility of the function.
+
+### Representations for irreversible functions
+
+### Representations for reversible functions
+
+#### Permutations in *S<sub>2<sup>n</sup></sub>*
 
 ## Gate libraries
 
