@@ -15,6 +15,7 @@
 		- [Enumerative synthesis](#enumerative-synthesis)
 	- [Functional heuristic algorithms](#functional-heuristic-algorithms)
 		- [Transformation-based synthesis](#transformation-based-synthesis)
+		- [Cycle-based synthesis](#cycle-based-synthesis)
 		- [Decomposition-based synthesis](#decomposition-based-synthesis)
 		- [Metehauristic synthesis](#metaheuristic-synthesis)
 		- [Greedy synthesis](#greedy-synthesis)
@@ -184,22 +185,22 @@ Starting from a reversible function, transformation-based synthesis applies gate
   This paper presents a symbolic variant of the transformation based synthesis approach for reversible logic. The approach allows the realization of larger reversible functions without additional ancilla lines. It exploits a property considering the ordering in which assignments need to be considered for adjustment. Both a BDD and a SAT based implementation of the symbolic synthesis algorithm have been presented.
 
 #### Cycle-based synthesis
-Every reversible function can be written in the form of disjoint cycles. For every cycle one can create a circuit that represents the cycle. On that base using cascade of gates gates the circuit representation of a given function can be created.
+Every reversible function can be written in the form of disjoint cycles. For every cycle one can create a circuit that represents the cycle. By concatenating all cascades for each cycle, a reversible circuit can be created.
 
 **Input representations:** truth table, permutation, cycles
 
 **Gate libraries:** MCT, MPMCT
 
 **References:**
-* [Shende, V. V., Prasad, A. K., Markov, I. L., and Hayes, J. P. 2003. Synthesis of reversible logic circuits. *IEEE Trans. Comput. Aid. Des*. **22**, 6, 710–722](http://dx.doi.org/10.1109/TCAD.2003.811448)
+* [V.V. Shende, A.K. Prasad, I.L. Markov, and J.P. Hayes: Synthesis of reversible logic circuits, in: *IEEE Trans. Comput. Aid. Des.* **22**, 2003, 710–722.](http://dx.doi.org/10.1109/TCAD.2003.811448)
 
-* [Saeedi, M., Saheb Zamani, M., Sedighi, M., and Sasanian, Z. 2010. Synthesis of reversible circuit using cycle-based approach. *J. Emerg. Technol. Comput. Syst*. **6**, 4, 13:1–13:26](http://dx.doi.org/10.1145/1877745.1877747)
+* [M. Saeedi, M. Saheb Zamani, M. Sedighi, and Z. Sasanian: Synthesis of reversible circuit using cycle-based approach, in: *J. Emerg. Technol. Comput. Syst.* **6**, 2010, 13:1–13:26.](http://dx.doi.org/10.1145/1877745.1877747)
 
-The above papers introduces algorithm of synthesis that can be used for reversible circuits using MCT gate library. In the papers the method of mapping 2 and 3 cycles into sequence of MCT gates is presented.
+  The above papers introduces algorithm of synthesis that can be used for reversible circuits using MCT gate library. In the papers the method of mapping 2 and 3 cycles into sequence of MCT gates is presented.
 
-* [Ribeiro, A. C., Kowada, L. A. B., Marquezino, F. L., and Figueiredo, C. M. H. (2015). A new reversible circuit synthesis algorithm based on cycle representations of permutations. *Electronic Notes in Discrete Mathematics*, **50**, 187-192](http://dx.doi.org/10.1016/j.endm.2015.07.032)
+* [A.C. Ribeiro, L.A.B. Kowada, F.L. Marquezino, and C.M.H. Figueiredo: A new reversible circuit synthesis algorithm based on cycle representations of permutations, in: *Electronic Notes in Discrete Mathematics* **50**, 2015, 187-192.](http://dx.doi.org/10.1016/j.endm.2015.07.032)
 
-This paper extends previous works and allows cycle based synthesis using Toffoli gates with positive and negative controls.
+  This paper extends previous works and allows cycle based synthesis using Toffoli gates with positive and negative controls.
 
 #### Decomposition-based synthesis
 In decomposition-based synthesis the reversible function is iteratively decomposed into simpler functions based on the  *Young subgroup decomposition*: Given a line *i*, every reversible function *f* can be decomposed into three functions *f = g<sub>1</sub>* ○ *f'* ○ *g<sub>2</sub>*, where *g<sub>1</sub>* and *g<sub>2</sub>* can be realized with a single-target gate on line *i* and *f'* is a reversible function that does not change in line *i*. Based on this decomposition, synthesis algorithms determine the gates for *g<sub>1</sub>* and *g<sub>2</sub>* and then recur on *f'*.
