@@ -186,7 +186,7 @@ Starting from a reversible function, transformation-based synthesis applies gate
 #### Cycle-based synthesis
 Every reversible function can be written in the form of disjoint cycles. For every cycle one can create a circuit that represents the cycle. On that base using cascade of gates gates the circuit representation of a given function can be created.
 
-**Input representations:** truth table, RCBDD
+**Input representations:** truth table, permutation, cycles
 
 **Gate libraries:** MCT, MPMCT
 
