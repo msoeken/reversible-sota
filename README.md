@@ -51,6 +51,10 @@ We differentiate representations based on whether they are used to represent irr
 
 #### Permutations in *S<sub>2<sup>n</sup></sub>*
 
+#### Premutation Cycles
+
+A reversible function always implements a bijective mapping between input and output binary signals. That means a reversible function is an permutation of its inputs. It is known that any permutation can be decomposed into a product of cycles. Any permutation can be represent uniquely, up to the order, as product of disjoint cycles. Two cycles are called disjoint if they have no common members.  Additionally any permutation cycle of length at least 4 can be written as a product of 3-cycle and  2-cycles. For example function *f=[1,0,3,2,6,4,5,7]* can be written in cycle form as *(0,1)(2,3)(4,6,5)*.
+
 ## Gate libraries
 
 ### NCT (Not, CNOT, Toffoli)
