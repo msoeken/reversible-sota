@@ -30,6 +30,16 @@
 
 ## Overview
 
+###Motivation 
+
+The reversible computing becomes one of more interesting areas in modern computer science. The interest in the area is highly connected with considerations on power consumption of computing devices. In the sixties of last century Landauer and Bennet theoretically proven that there is energy dissipation connected to irreversible erasure of information and reversible computing is a promising solution to this [Landauer 1961](http://dx.doi.org/10.1147/rd.53.0183) [Bennett 1973](http://dx.doi.org/10.1147/rd.176.0525). Lately the Landauer limit was measured in experiment [Berut et. al. 2012](http://dx.doi.org/10.1038/nature10872). There are some basic technologies that can be used for implementation of reversible circuits. To name a few known solutions
+* CMOS [Van Rentergem and De Vos 2005](http://www.oldcitypublishing.com/journals/ijuc-home/ijuc-issue-contents/ijuc-volume-1-number-4-2005/ijuc-1-4-p-339-355/) [Anantharam et. al. 2004](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.84.5099),
+* Nano and photonic [Politi et. al. 2009](http://dx.doi.org/10.1126/science.1173731) [Gao et. al. 2010](http://dx.doi.org/10.1103/PhysRevLett.104.020501),
+* Quantum-dot Cellular Automata (QCA) [Sen et. al. 2014](http://dx.doi.org/10.1145/2629538)
+* Biomolecular [Genot et. al. 2011](http://dx.doi.org/10.1021/ja208497p) [Fratto et. al. 2015](http://dx.doi.org/10.1142/S0129626415400010).
+
+This proves the need for effective method of Reversible circuits synthesis as the process of generate optimal or near optimal reversible circuits from a given specification.
+
 ![Overview](data/overview.png)
 
 We classify reversible synthesis algorithms using 4 levels of categorization:
