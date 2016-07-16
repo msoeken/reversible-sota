@@ -30,16 +30,6 @@
 
 ## Overview
 
-###Motivation 
-
-The reversible computing becomes one of more interesting areas in modern computer science. The interest in the area is highly connected with considerations on power consumption of computing devices. In the sixties of last century Landauer and Bennet theoretically proven that there is energy dissipation connected to irreversible erasure of information and reversible computing is a promising solution to this [Landauer 1961](http://dx.doi.org/10.1147/rd.53.0183) [Bennett 1973](http://dx.doi.org/10.1147/rd.176.0525). Lately the Landauer limit was measured in experiment [Berut et. al. 2012](http://dx.doi.org/10.1038/nature10872). There are some basic technologies that can be used for implementation of reversible circuits. To name a few known solutions
-* CMOS [Van Rentergem and De Vos 2005](http://www.oldcitypublishing.com/journals/ijuc-home/ijuc-issue-contents/ijuc-volume-1-number-4-2005/ijuc-1-4-p-339-355/) [Anantharam et. al. 2004](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.84.5099),
-* Nano and photonic [Politi et. al. 2009](http://dx.doi.org/10.1126/science.1173731) [Gao et. al. 2010](http://dx.doi.org/10.1103/PhysRevLett.104.020501),
-* Quantum-dot Cellular Automata (QCA) [Sen et. al. 2014](http://dx.doi.org/10.1145/2629538)
-* Biomolecular [Genot et. al. 2011](http://dx.doi.org/10.1021/ja208497p) [Fratto et. al. 2015](http://dx.doi.org/10.1142/S0129626415400010).
-
-This proves the need for effective method of Reversible circuits synthesis as the process of generate optimal or near optimal reversible circuits from a given specification.
-
 ![Overview](data/overview.png)
 
 We classify reversible synthesis algorithms using 4 levels of categorization:
@@ -57,11 +47,21 @@ We differentiate representations based on whether they are used to represent irr
 
 ### Representations for irreversible functions
 
+#### Truth tables
+
+A truth table for a single Boolean function over *n* variables can be considered as a bitstring of size *2<sup>n</sup>*, in which each bit represents the truth value for an assignment. The input assignments are lexicographically ordered from 0...0 to 1...1.
+
+#### Binary decision diagram
+
+A binary decision diagram (BDD) is based on Shannon's expansion. Nodes represent functions and are labeled with a variable. Two children represent the negative and positive children of the node's function with resect to the node's variable. Reduction rules can compress the size of the BDD: a node can be skipped if both children are the same and if two nodes represent the same function only one needs to be kept. If co-factors are applied in the same order on each path and if reductions are applied as long as possible, one reaches a canonical representation, i.e., for any given function from each starting point the same representation is finally reached.
+
 ### Representations for reversible functions
 
-#### Permutations in *S<sub>2<sup>n</sup></sub>*
+#### Truth tables
 
-#### Premutation Cycles
+With *n* truth tables for Boolean functions over *n* variables one can represent a reversible function. In such a setting, it is easier to consider the mapping of input to output patterns. Only if all output patterns occur, the truth tables represent a reversible function.
+
+#### Permutations in *S<sub>2<sup>n</sup></sub>* and permutation cycles
 
 A reversible function always implements a bijective mapping between input and output binary signals. That means a reversible function is an permutation of its inputs. It is known that any permutation can be decomposed into a product of cycles. Any permutation can be represent uniquely, up to the order, as product of disjoint cycles. Two cycles are called disjoint if they have no common members.  Additionally any permutation cycle of length at least 4 can be written as a product of 3-cycle and  2-cycles. For example function *f=[1,0,3,2,6,4,5,7]* can be written in cycle form as *(0,1)(2,3)(4,6,5)*.
 
